@@ -9,7 +9,6 @@ CLASS_NAMES = ["NORMAL", "PNEUMONIA"]
 def load_trained_model(model_path):
     return tf.keras.models.load_model(model_path)
 
-
 def preprocess_image(image_path):
 
     img = cv2.imread(image_path)
