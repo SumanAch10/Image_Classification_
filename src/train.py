@@ -24,5 +24,4 @@ def train_model(model, train_ds, val_ds, epochs):
         epochs=epochs,
         callbacks=callbacks
     )
-
     return history
