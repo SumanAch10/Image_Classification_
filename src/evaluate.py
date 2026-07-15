@@ -1,12 +1,12 @@
 from sklearn.metrics import classification_report
 import numpy as np
 
-def evaluate_model(model, val_ds, class_names):
+def evaluate_model(model, test_ds, class_names):
 
     y_true = []
     y_pred = []
 
-    for images, labels in val_ds:
+    for images, labels in test_ds:
         preds = model.predict(images)
 
         y_true.extend(np.argmax(labels.numpy(), axis=1))
