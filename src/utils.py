@@ -1,5 +1,6 @@
 import yaml
 
+# Load configurations
 def load_config(path):
     with open(path) as file:
         config = yaml.safe_load(file)
