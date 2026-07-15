@@ -21,4 +21,12 @@ def load_data(data_path, img_size, batch_size):
         label_mode="categorical"
     )
 
-    return train_ds, val_ds
+    #Testing set
+    test_ds = tf.keras.preprocessing.image_dataset_from_directory(
+        os.path.join(data_path, "test"),
+        image_size=(img_size, img_size),
+        batch_size=batch_size,
+        label_mode="categorical"
+    )
+
+    return train_ds, val_ds,test_ds
