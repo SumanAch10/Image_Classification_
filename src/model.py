@@ -7,7 +7,7 @@ def build_model(num_classes, img_size):
         include_top=False,
         input_shape=(img_size, img_size, 3)
     )
-
+    # Freeze the base_model 
     base_model.trainable = False
 
     x = tf.keras.layers.GlobalAveragePooling2D()(base_model.output)
